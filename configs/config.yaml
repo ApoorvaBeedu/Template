@@ -1,0 +1,28 @@
+run_id: 0
+seed: 42
+cwd: ${hydra:runtime.cwd}
+
+split: [train, test, val]
+## Model related
+
+
+workers: 4
+num_epochs: 400
+num_gpu: 1
+batch_size: 8
+
+
+defaults:
+  - datasets/config
+  - optimiser/optimiser
+  - wandb/wandb
+
+
+annotation_path: <something.csv>
+data_path: "${cwd}/data"
+
+## Restore file
+model_dir_path: ${cwd}/model
+restore_file: 
+
+

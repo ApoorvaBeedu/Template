@@ -1,0 +1,18 @@
+# https://www.kaggle.com/code/isbhargav/guide-to-pytorch-learning-rate-scheduling/notebook
+
+optimiser: sgd
+lr: 1e-4
+lr_multiplier: 0.9
+scheduler_stepSize: 1
+scheduler_type: step
+weight_decay: 0.00001
+stop_lr: 1e-6
+
+# Cycle learning scheduler stuff
+max_lr: 0.1
+anneal_strategy: exp_range #triangular, triangular2, exp_range for cyclic and cos, linear onecycle
+step_size_up: 100
+
+# CosineAnnealingWarmRestarts
+T_0: 100
+T_mult: 2 
